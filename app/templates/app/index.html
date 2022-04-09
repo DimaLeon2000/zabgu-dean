@@ -51,9 +51,19 @@
                 {% endfor %}
             </select>
         </div>
-        <div>
-            <input type="checkbox" class="form-check-input" name="score-sort-input" id="score-sort">
-            <label class="form-check-label" for="score-sort">Сортировка по оценке + задолженности</label>
+        <div class="form-group">
+            <label class="form-label">Сортировка:</label>
+            <select class="form-control combobox" name="sort-input">
+                <option value selected>-</option>
+                <option value="session_id__student_id__surname">Фамилия</option>
+                <option value="session_id__student_id__group__name">Группа</option>
+                <option value="subject__name">Предмет</option>
+                <option value="score">Оценка</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" class="form-check-input" name="score-zeroes-input" id="score-zeroes">
+            <label class="form-check-label" for="score-zeroes">Только задолженности</label>
         </div>
     </form>
     <table class="table">
